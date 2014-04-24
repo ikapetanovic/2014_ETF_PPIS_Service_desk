@@ -1,0 +1,51 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Filtriranje</title>
+</head>
+
+<body style="margin-top:10%; margin-left:20%;margin-right:20%">
+	<center>
+
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="eventManagerFiltriranje.html">Filtriranje</a></li>
+		  <li><a href="eventManagerIncidentiNovi.html">Incidenti</a></li>
+		  <li><a href="eventManagerZahtjevi.html">Zahtjevi</a></li>
+		</ul>
+		
+		<table class="table">
+			<form method="POST" action="eventManagerFiltriranjeUredi.html">
+			
+			<th>ID</th>
+			<th>Datum i vrijeme</th>
+			<th>Korisnik</th>
+			<th>Naslov</th>
+			<th>Kategorija</th>
+			<th>Podkategorija</th>
+			<th>Konfiguracijska stavka</th>
+			<th>Prioritet</th>
+			<th></th>
+			
+			<tr>
+				<td>1</td>
+				<td>2009-04-20 14:00:00</td>
+				<td>Radio Radiović</td>
+				<td>MR uređaj pokvaren</td>	
+				<td>Hardver</td>
+				<td>Hardver u uređaju</td>
+				<td>MAGNETOM Espree 1.5T</td>
+				<th>Visok</th>
+				<td><input type="submit" class="btn btn-success" value="Uredi"/></td>
+			</tr>
+			
+			</form>
+		</table>
+	</center>
+</body>
+
+</html>

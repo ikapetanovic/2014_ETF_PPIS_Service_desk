@@ -1,0 +1,58 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Pregled incidenata</title>
+</head>
+
+<body style="margin-top:10%; margin-left:20%;margin-right:20%">
+	<center>
+
+		<ul class="nav nav-tabs">
+		  <li><a href="eventManagerFiltriranje.html">Filtriranje</a></li>
+		  <li class="active"><a href="eventManagerIncidentiNovi.html">Incidenti</a></li>
+		  <li><a href="eventManagerZahtjevi.html">Zahtjevi</a></li>
+		</ul>
+		
+		<ul class="nav nav-pills">
+		  <li><a href="eventManagerIncidentiNovi.html">Novi incident</a></li>
+		  <li class="active"><a href="eventManagerIncidentiPregled.html">Pregled incidenata</a></li>
+		</ul>
+		
+		<table class="table">
+			<form method="POST" action="eventManagerIncidentiUredi.html">
+			
+			<th>ID</th>
+			<th>Datum i vrijeme</th>
+			<th>Korisnik</th>
+			<th>Naslov</th>
+			<th>Kategorija</th>
+			<th>Podkategorija</th>
+			<th>Konfiguracijska stavka</th>
+			<th>Prioritet</th>
+			<th>Status</th>			
+			<th></th>
+			
+			<tr>
+				<td>1</td>
+				<td>2009-04-20 14:00:00</td>
+				<td>Radio Radiović</td>
+				<td>MR uređaj pokvaren</td>	
+				<td>Hardver</td>
+				<td>Hardver</td>
+				<td>Hardver</td>				
+				<td>Visok</td>
+				<td>Na čekanju</td>
+				<td><input type="submit" class="btn btn-success" value="Uredi"/></td>
+			</tr>
+			
+			</form>
+		</table>
+	</center>
+</body>
+
+</html>
