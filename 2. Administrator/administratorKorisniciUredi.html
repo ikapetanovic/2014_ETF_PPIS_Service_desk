@@ -1,0 +1,70 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Uređivanje korisnika</title>
+</head>
+
+<body style="margin-top:10%; margin-left:20%;margin-right:20%">
+	<center>
+	
+		<ul class="nav nav-tabs">
+		  <li><a href="administratorOdjeliNovi.html">Odjeli</a></li>
+		  <li class="active"><a href="administratorKorisniciNovi.html">Korisnici</a></li>
+		</ul>
+		
+		<ul class="nav nav-pills">
+		  <li><a href="administratorKorisniciNovi.html">Novi korisnik</a></li>
+		  <li><a href="administratorKorisniciPregled.html">Pregled korisnika</a></li>
+		</ul>
+		
+		<table>
+			<form method="POST" action="administratorKorisniciNovi.php">
+			
+				<tr><td><label style="text-align:left;">Ime i prezime:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="imePrezime"/></td></tr>
+				
+				<tr><td><label>Korisničko ime:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="korisnickoIme"/></td></tr>
+				
+				<tr><td><label>Lozinka:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="lozinka"/></td></tr>
+				
+				<tr><td><label>Email:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="email"/></td></tr>
+				
+				<tr><td><label>Telefon:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="telefon"/></td></tr>
+				
+				<tr><td><label>Privilegija:</label></td></tr>			
+				<tr><td>
+					<select  class="btn">
+					  <option value="Administrator">Administrator</option>
+					  <option value="User">User</option>
+					  <option value="EventManager">Event Manager</option>
+					  <option value="IncidetManager">Incident Manager</option>
+					  <option value="RequestManager">Request Manager</option>
+					  <option value="SupplierManager">Supplier Manager</option>
+					  <option value="SuperManager">Super Manager</option>				  
+					</select>
+				</td></tr> 				
+				
+				<tr><td><label>Odjel:</label></td></tr>
+				<tr><td>
+					<select class="btn">
+					  <option value="IT">IT</option>
+					  <option value="Radiologija">Radiologija</option>
+					  <option value="Oftamologija">Oftamologija</option>				  
+					</select>
+				</td></tr>
+				
+				<tr><td style="text-align:right;"><input type="submit" class="btn btn-success" value="Spasi"/> <input type="button" class="btn" value="Odustani"/></td></tr>
+			</form>
+		</table>
+	</center>
+</body>
+</html>

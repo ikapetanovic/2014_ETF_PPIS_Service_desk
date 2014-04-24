@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Uređivanje odjela</title>
+</head>
+
+<body style="margin-top:10%; margin-left:20%;margin-right:20%">
+	<center>
+
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="administratorOdjeliNovi.html">Odjeli</a></li>
+		  <li><a href="administratorKorisniciNovi.html">Korisnici</a></li>
+		</ul>
+		
+		<ul class="nav nav-pills">
+		  <li><a href="administratorOdjeliNovi.html">Novi odjel</a></li>
+		  <li><a href="administratorOdjeliPregled.html">Pregled odjela</a></li>
+		</ul>
+		
+		<table>
+			<form method="POST" action="administratorOdjeliUredi.php">
+				<tr><td><label style="text-align:left;">Naziv:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="naziv"/></td></tr> 
+				
+				<tr><td><label>Lokacija:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="lokacija"/></td></tr>
+				
+				<tr><td><label>Adresa:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="adresa"/></td></tr>
+				
+				<tr><td><label>Telefon:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="telefon"/></td></tr>
+				
+				<tr><td><label>Email:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="email"/></td></tr>
+				
+				<tr><td style="text-align:right;"><input type="submit" class="btn btn-success" value="Spasi"/> <input type="button" class="btn" value="Odustani"/></td></tr>
+			</form>
+		</table>
+	</center>
+</body>
+</html>

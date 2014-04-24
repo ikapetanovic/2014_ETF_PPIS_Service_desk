@@ -1,0 +1,109 @@
+<html>
+
+<head>
+
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Pregled korisnika</title>
+</head>
+
+<body style="margin-top:10%; margin-left:20%;margin-right:20%">
+	<center>
+
+		<ul class="nav nav-tabs">
+		  <li><a href="administratorOdjeliNovi.html">Odjeli</a></li>
+		  <li class="active"><a href="administratorKorisniciNovi.html">Korisnici</a></li>
+		</ul>
+		
+		<ul class="nav nav-pills">
+		  <li><a href="administratorKorisniciNovi.html">Novi korisnik</a></li>
+		  <li class="active"><a href="administratorKorisniciPregled.html">Pregled korisnika</a></li>
+		</ul>
+		
+		<table class="table">
+			<form method="POST" action="administratorKorisniciUredi.html">
+			
+			<th>ID</th>
+			<th>Ime i prezime</th>
+			<th>Korisničko ime</th>
+			<th>Lozinka</th>
+			<th>Email</th>
+			<th>Telefon</th>
+			<th>Privilegija</th>
+			<th>Odjel</th>
+			<th></th>
+			
+			<tr>
+				<td>1</td>
+				<td>Admin Adminović</td>
+				<td>admin</td>
+				<td>password</td>
+				<td>admin@kcus.ba</td>
+				<td>033 123 456</td>
+				<td>Administrator</td>
+				<td>IT</td>
+				
+				<td><input type="submit" class="btn btn-success" value="Uredi"/> <input type="button" class="btn" value="Obriši"/></td>
+			</tr>
+			
+			<tr>
+				<td>2</td>
+				<td>Radio Radiović</td>
+				<td>rradiovic</td>
+				<td>password</td>
+				<td>rradiovic@kcus.ba</td>
+				<td>033 223 456</td>
+				<td>User</td>
+				<td>Radiologija</td>
+				
+				<td><input type="submit" class="btn btn-success" value="Uredi"/> <input type="button" class="btn" value="Obriši"/></td>
+			</tr>
+			
+			<tr>
+				<td>3</td>
+				<td>Event Managerovic</td>
+				<td>emanagerovic</td>
+				<td>password</td>
+				<td>emanagerovic@kcus.ba</td>
+				<td>033 323 456</td>
+				<td>Event Manager</td>
+				<td>IT</td>
+				
+				<td><input type="submit" class="btn btn-success" value="Uredi"/> <input type="button" class="btn" value="Obriši"/></td>
+			</tr>
+			
+			<tr>
+				<td>4</td>
+				<td>Incident Managerovic</td>
+				<td>imanagerovic</td>
+				<td>password</td>
+				<td>imanagerovic@kcus.ba</td>
+				<td>033 423 456</td>
+				<td>Incident Manager</td>
+				<td>IT</td>
+				
+				<td><input type="submit" class="btn btn-success" value="Uredi"/> <input type="button" class="btn" value="Obriši"/></td>
+			</tr>
+			
+			<tr>
+				<td>5</td>
+				<td>Super Managerovic</td>
+				<td>smanagerovic</td>
+				<td>password</td>
+				<td>smanagerovic@kcus.ba</td>
+				<td>033 523 456</td>
+				<td>Super Manager</td>
+				<td>IT</td>
+				
+				<td><input type="submit" class="btn btn-success" value="Uredi"/> <input type="button" class="btn" value="Obriši"/></td>
+			</tr>
+			
+			</form>
+		</table>
+	</center>
+</body>
+
+</html>

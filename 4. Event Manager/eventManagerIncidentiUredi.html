@@ -1,0 +1,148 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" media="all" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Uređivanje incidenta</title>
+</head>
+
+<body style="margin-top:10%; margin-left:20%;margin-right:20%">
+	<center>
+	
+		<ul class="nav nav-tabs">
+		  <li><a href="eventManagerFiltriranje.html">Filtriranje</a></li>
+		  <li class="active"><a href="eventManagerIncidentiPregled.html">Incidenti</a></li>
+		  <li><a href="eventManagerZahtjevi.html">Zahtjevi</a></li>
+		</ul>
+		
+		<ul class="nav nav-pills">
+		  <li><a href="eventManagerIncidentiNovi.html">Novi incident</a></li>
+		  <li><a href="eventManagerIncidentiPregled.html">Pregled incidenata</a></li>
+		</ul>
+		
+		<table>
+			<form method="POST" action="userIncidentiNovi.php">
+			
+				<tr><td><label style="text-align:left;">Datum i vrijeme:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="datumPrijave" readonly="true"/></td></tr>
+				
+				<tr><td><label>Korisnik:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="korisnik"/></td></tr>
+				
+				<tr><td><label>Odjel:</label></td></tr>
+				<tr><td>
+					<select class="btn">
+					  <option value="IT">IT</option>
+					  <option value="Radiologija">Radiologija</option>
+					  <option value="Oftamologija">Oftamologija</option>				  
+					</select>
+				</td></tr>
+				
+				<tr><td><label>Tip prijave:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="tipPRijave" readonly/></td></tr>
+				
+				<tr><td><label>Naslov:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="naslov"/></td></tr>
+								
+				<tr><td><label>Kategorija:</label></td></tr>			
+				<tr><td>
+					<select class="btn">
+					  <option value="Softver">Softver</option>
+					  <option value="Hardver">Hardver</option>
+					  <option value="Popravka">Popravka</option>
+					  <option value="Nabavka">Nabavka</option>				  
+					</select>
+				</td></tr> 				
+				
+				<tr><td><label>Podkategorija:</label></td></tr>
+				<tr><td>
+					<select class="btn">
+					  <option value="SoftverURacunaru">Softver u računaru</option>
+					  <option value="SoftverUMrezi">Softver u mreži</option>
+					  <option value="SoftverUUredjaju">Softver u uređaju</option>				  
+					  <option value="SoftverUOpremi">Softver u opremi</option>
+					  <option value="HardverURacunaru">Hardver u računaru</option>
+					  <option value="HardverUMrezi">Hardver u mreži</option>
+					  <option value="HardverUUredjaju">Hardver u uređaju</option>
+					  <option value="HardverUOpremi">Hardver u opremi</option>
+					  <option value="PopravkaRacunara">Popravka računara</option>
+					  <option value="PopravkaMreznogUredjaja">Popravka mrežnog uređaja</option>
+					  <option value="PopravkaDijagnostickogUredjaja">Popravka dijagnostičkog uređaja</option>
+					  <option value="PopravkaOpreme">Popravka opreme</option>
+					  <option value="PopravkaNamjestaja">Popravka namještaja</option>
+					  <option value="NabavkaRacunara">Nabavka računara</option>
+					  <option value="NabavkaMreznogUredjaja">Nabavka mrežnog uređaja</option>
+					  <option value="NabavkaDijagnostickogUredjaja">Nabavka dijagnostičkog uređaja</option>
+					  <option value="NabavkaOpreme">Nabavka opreme</option>
+					  <option value="NabavkaNamjestaja">Nabavka namještaja</option>				  
+					</select>
+				</td></tr>
+				
+				<tr><td><label>Konfiguracijska stavka:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="konfiguracijskaStavka"/></td></tr>
+				
+				<tr><td><label>Povratna info preko:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="povratnaInfoPreko"/></td></tr>
+				
+				<tr><td><label>Opis:</label></td></tr>
+				<tr><td><textarea class="btn" name="opis"></textarea></td></tr>
+				
+				<tr><td><label>Komentar (vidljivo korisniku):</label></td></tr>
+				<tr><td><textarea class="btn" name="komentar"></textarea></td></tr>
+				
+				<tr><td><label>Uticaj:</label></td></tr>
+                <tr><td>
+                    <select class="btn">
+                      <option value="1">Visok</option>
+                      <option value="2">Srednji</option>
+                      <option value="3">Nizak</option>                 
+                    </select>
+                </td></tr> 
+				
+				<tr><td><label>Hitnost:</label></td></tr>
+                <tr><td>
+                    <select class="btn">
+                      <option value="1">Visok</option>
+                      <option value="2">Srednji</option>
+                      <option value="3">Nizak</option>                 
+                    </select>
+                </td></tr> 
+				
+				<tr><td><label>Prioritet:</label></td></tr>
+                <tr><td>
+                    <select class="btn" readonly="true">
+                      <option value="1">Kritičan</option>
+                      <option value="2">Visok</option>
+                      <option value="3">Srednji</option>                 
+					  <option value="4">Nizak</option>
+					  <option value="5">Planiran</option>
+                    </select>
+                </td></tr>
+				
+				<tr><td><label>Status:</label></td></tr>
+				<tr><td>
+					<select class="btn">
+					  <option value="Novi">Novi</option>
+					  <option value="NaCekanju">Na čekanju</option>
+					  <option value="Rijesen">Riješen</option>
+					  <option value="Zatvoren">Zatvoren</option>
+					</select>
+				</td></tr> 
+				
+				<tr><td><label>Dodijeljen grupi:</label></td></tr>
+				<tr><td>
+					<select class="btn">					  				  
+						<option value="IncidetManager">Incident Manager</option>				  
+						<option value="EventManager">Event Manager</option>	
+					</select>
+				</td></tr> 				
+				
+				<tr><td style="text-align:right;"><input type="submit" class="btn btn-success" value="Spasi"/> <input type="reset" class="btn" value="Odustani"/></td></tr>
+			</form>
+		</table>
+	</center>
+</body>
+</html>
