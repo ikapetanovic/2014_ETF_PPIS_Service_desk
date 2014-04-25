@@ -28,16 +28,25 @@
 			<th>Datum i vrijeme</th>
 			<th>Naslov</th>
 			<th>Komentar</th>
-			<th>Status</th>
 			<th>Prioritet</th>
+			<th>Status</th>		
 			
 			<tr>
 				<td>1</td>
 				<td>2009-04-20 14:00:00</td>
 				<td>MR uređaj pokvaren</td>
-				<td></td>
-				<td>Na čekanju</td>
+				<td>Ovo je komentar od nadležnih (npr. od Incident Managera) kojim obavještava korisnika šta se dešava s incidentom ili zahtjevom</td>
 				<td>Visok</td>
+				<td>
+					<select  class="btn">
+					  <option value="novi">Novi</option>
+					  <option value="naCekanju">Na čekanju</option>
+					  <option value="aktivan">Aktivan</option>
+					  <option value="rijesen">Riješen</option>
+					  <option value="zatvoren">Zatvoren</option>
+					</select>
+				</td>
+				
 			</tr>
 			
 			</form>

@@ -6,8 +6,8 @@
 		mysql_set_charset("utf8");
 		mysql_select_db("service_desk_db") or die("Unable to connect to the database: ".mysql_error()); // NAPOMENA: Ukoliko se promijeni, podesiti odgovarajući naziv baze 
 				
-		// idKorisnik bi trebao da se upiše na podataka o korisniku koji je logiran
-		$q = mysql_query("INSERT INTO dogadjaj SET datumVrijemePrijave = 'date("Y-m-d H:i:s")', naslov = '$_POST[naslov]', kategorija = '$_POST[kategorija]', podkategorija = '$_POST[podkategorija]', konfiguracijskaStavka = '$_POST[konfiguracijskaStavka]', uticaj = '$_POST[uticaj]', hitnost = '$_POST[hitnost]', prioritet = '$_POST[prioritet]', opis = '$_POST[opis]', status = 'novi', korisnik_idKorisnik = '$_POST[idKorisnik]';") or die("Error in query: ".mysql_error());
+		// $IDKorisnik bi trebao da se dobije na osnovu podataka o korisniku koji je logiran
+		$q = mysql_query("INSERT INTO dogadjaj SET datumVrijemePrijave = 'date("Y-m-d H:i:s")', naslov = '$_POST[naslov]', kategorija = '$_POST[kategorija]', podkategorija = '$_POST[podkategorija]', model = '$_POST[model]', uticaj = '$_POST[uticaj]', hitnost = '$_POST[hitnost]', prioritet = '$_POST[prioritet]', opis = '$_POST[opis]', status = 'novi', korisnik_idKorisnik = '$IDKorisnik';") or die("Error in query: ".mysql_error());
 				
 		mysql_close();
 		

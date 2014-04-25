@@ -27,7 +27,7 @@
 			<form method="POST" action="userIncidentiNovi.php">
 			
 				<tr><td><label style="text-align:left;">Datum i vrijeme:</label></td></tr>
-				<tr><td><input type="text" class="btn" name="datumPrijave"/></td></tr>
+				<tr><td><input type="text" class="btn" name="datumPrijave" readonly /></td></tr>
 				
 				<tr><td><label>Korisnik:</label></td></tr>
 				<tr><td><input type="text" class="btn" name="korisnik"/></td></tr>
@@ -87,7 +87,7 @@
 					</select>
 				</td></tr>
 				
-				<tr><td><label>Konfiguracijska stavka:</label></td></tr>
+				<tr><td><label>Model:</label></td></tr>
 				<tr><td><input type="text" class="btn" name="konfiguracijskaStavka"/></td></tr>
 				
 				<tr><td><label>Povratna info preko:</label></td></tr>
@@ -131,7 +131,11 @@
 				<tr><td><label>Status:</label></td></tr>
 				<tr><td>
 					<select class="btn">
-					  <option value="NaCekanju">Na čekanju</option>
+						<option value="novi">Novi</option>
+						<option value="naCekanju">Na čekanju</option>
+						<option value="aktivan">Aktivan</option>
+						<option value="rijesen">Riješen</option>
+						<option value="zatvoren">Zatvoren</option>
 					</select>
 				</td></tr> 
 				
