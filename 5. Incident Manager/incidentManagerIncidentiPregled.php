@@ -19,7 +19,7 @@
 		
 		mysql_close();
 		
-		$q2 = mysql_query("SELECT idIncident, datumVrijemePrijave, korisnik, naslov, kategorija, podkategorija, konfiguracijskaStavka, prioritet, status  FROM incident WHERE dodijeljenaGrupa = $privilegija;") or die("Error in query: ".mysql_error());
+		$q2 = mysql_query("SELECT idIncident, datumVrijemePrijave, korisnik, naslov, kategorija, podkategorija, model, prioritet, status  FROM incident WHERE dodijeljenaGrupa = $privilegija;") or die("Error in query: ".mysql_error());
 
 		while ($row = mysql_fetch_assoc($q2))
 		{
@@ -30,7 +30,7 @@
 			echo "<td>" . $row['naslov'] . "</td>";
 			echo "<td>" . $row['kategorija'] . "</td>";
 			echo "<td>" . $row['podkategorija'] . "</td>";
-			echo "<td>" . $row['konfiguracijskaStavka'] . "</td>";
+			echo "<td>" . $row['model'] . "</td>";
 			echo "<td>" . $row['prioritet'] . "</td>";
 			echo "<td>" . $row['status'] . "</td>";	
 			echo "<td><input type="submit" class="btn btn-success" value="Uredi"/>";

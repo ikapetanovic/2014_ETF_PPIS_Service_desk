@@ -6,9 +6,9 @@
 		mysql_set_charset("utf8");
 		mysql_select_db("service_desk_db") or die("Unable to connect to the database: ".mysql_error()); // NAPOMENA: Ukoliko se promijeni, podesiti odgovarajući naziv baze 
 
-		// IDIncident treba da se odredi kada se kliknulo na neki red u tabeli kod pregleda incidenata
+		// $IDIncident treba da se odredi kada se kliknulo na neki red u tabeli kod pregleda incidenata
 		
-		$q = mysql_query("SELECT datumVrijemePrijave, korisnik, odjel, tipPrijave, naslov, kategorija, podkategorija, konfiguracijskaStavka, povratnaInfoPreko, opis, komentar, uticaj, hitnost, prioritet, status, dodijeljenaGrupa FROM incident WHERE idIncident = '$_POST[IDIncident]';") or die("Error in query: ".mysql_error());
+		$q = mysql_query("SELECT datumVrijemePrijave, korisnik, odjel, tipPrijave, naslov, kategorija, podkategorija, model, povratnaInfoPreko, opis, komentar, uticaj, hitnost, prioritet, status, dodijeljenaGrupa FROM incident WHERE idIncident = '$IDIncident';") or die("Error in query: ".mysql_error());
 		
 		while ($row = mysql_fetch_assoc($q))
 		{

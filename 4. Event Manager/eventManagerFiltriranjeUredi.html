@@ -22,7 +22,7 @@
 			<form method="POST" action="userDogadjajNovi.php">
 							
 				<tr><td><label style="text-align:left;">Datum i vrijeme:</label></td></tr>
-				<tr><td><input type="text" class="btn" name="datumVrijemePrijave"/></td></tr>
+				<tr><td><input type="text" class="btn" name="datumVrijemePrijave" readonly/></td></tr>
 				
 				<tr><td><label>Naslov:</label></td></tr>
 				<tr><td><input type="text" class="btn" name="naslov"/></td></tr>
@@ -61,8 +61,8 @@
 					</select>
 				</td></tr>
 				
-				<tr><td><label>Konfiguracijska stavka:</label></td></tr>
-				<tr><td><input type="text" class="btn" name="konfiguracijskaStavka"/></td></tr>				
+				<tr><td><label>Model:</label></td></tr>
+				<tr><td><input type="text" class="btn" name="model"/></td></tr>				
 				
 				<tr><td><label>Opis:</label></td></tr>
 				<tr><td><textarea class="btn" name="opis"></textarea></td></tr>
@@ -70,7 +70,11 @@
 				<tr><td><label>Status:</label></td></tr>
 				<tr><td>
 					<select class="btn">
-					  <option value="NaCekanju">Na čekanju</option>
+						<option value="novi">Novi</option>
+						<option value="naCekanju">Na čekanju</option>
+						<option value="aktivan">Aktivan</option>
+						<option value="rijesen">Riješen</option>
+						<option value="zatvoren">Zatvoren</option>
 					</select>
 				</td></tr> 				
 				
@@ -102,10 +106,7 @@
 					  <option value="5">Planiran</option>
                     </select>
                 </td></tr> 
-				
-				<tr><td><label>Vrsta događaja:</label></td></tr>
-				<tr><td><input type="radio" name="vrsta" value="incident">Incident<br> <input type="radio" name="vrsta" value="zahtjev">Zahtjev</td></tr>
-								
+							
 				<tr><td><label>Korisnik:</label></td></tr>
 				<tr><td><input type="text" class="btn" name="korisnik"/></td></tr>
 				
@@ -119,12 +120,17 @@
 				</td></tr>
 				
 				<tr><td><label>Komentar (vidljivo korisniku):</label></td></tr>
-				<tr><td><textarea class="btn" name="komentar"></textarea></td></tr>				
+				<tr><td><textarea class="btn" name="komentar"></textarea></td></tr>	
+
+				<tr><td><label>Vrsta događaja:</label></td></tr>
+				<tr><td><input type="radio" name="vrsta" value="incident">Incident<br> <input type="radio" name="vrsta" value="zahtjev">Zahtjev</td></tr>
+					
 				
-				<tr><td><label>Dodijeljen grupi:</label></td></tr>
+				<tr><td><label>Dodijeljena grupa:</label></td></tr>
 				<tr><td>
 					<select class="btn">					  
-					  <option value="IncidentManager">Incident Manager</option>			  
+					  <option value="IncidentManager">Incident Manager</option>
+					  <option value="RequestManager">Request Manager</option>					  
 					</select>
 				</td></tr>  							
 								

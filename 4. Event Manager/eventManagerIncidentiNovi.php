@@ -32,7 +32,7 @@
 		mysql_set_charset("utf8");
 		mysql_select_db("service_desk_db") or die("Unable to connect to the database: ".mysql_error()); // NAPOMENA: Ukoliko se promijeni, podesiti odgovarajući naziv baze 
 		
-		$q = mysql_query("INSERT INTO incident SET datumVrijemePrijave = '$_POST[datumVrijemePrijave]', naslov = '$_POST[naslov]', kategorija = '$_POST[kategorija]', podkategorija = '$_POST[podkategorija]', konfiguracijskaStavka = '$_POST[konfiguracijskaStavka]', uticaj = '$_POST[uticaj]', hitnost = '$_POST[hitnost]', prioritet = '$_POST[prioritet]', opis = '$_POST[opis]', status = 'naCekanju', tipPrijave = '$_POST[tipPrijave]', povratnaInfoPreko = '$_POST[povratnaInfoPreko]', dodijeljenaGrupa = 'IncidentManager', komentar = '$_POST[komentar]', korisnik = '$_POST[korisnik]';") or die("Error in query: ".mysql_error());
+		$q = mysql_query("INSERT INTO incident SET datumVrijemePrijave = '$_POST[datumVrijemePrijave]', naslov = '$_POST[naslov]', kategorija = '$_POST[kategorija]', podkategorija = '$_POST[podkategorija]', model = '$_POST[model]', uticaj = '$_POST[uticaj]', hitnost = '$_POST[hitnost]', prioritet = '$_POST[prioritet]', opis = '$_POST[opis]', status = 'naCekanju', tipPrijave = '$_POST[tipPrijave]', povratnaInfoPreko = '$_POST[povratnaInfoPreko]', dodijeljenaGrupa = 'IncidentManager', komentar = '$_POST[komentar]', korisnik = '$_POST[korisnik]';") or die("Error in query: ".mysql_error());
 				
 		mysql_close();
 		

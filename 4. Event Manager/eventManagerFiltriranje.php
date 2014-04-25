@@ -19,7 +19,7 @@
 		
 		mysql_close();		
 		
-		$q2 = mysql_query("SELECT idDogadjaj, datumVrijemePrijave, korisnik_idKorisnik, naslov, kategorija, podkategorija, konfiguracijskaStavka, prioritet FROM dogadjaj WHERE status = 'novi';") or die("Error in query: ".mysql_error());
+		$q2 = mysql_query("SELECT idDogadjaj, datumVrijemePrijave, korisnik_idKorisnik, naslov, kategorija, podkategorija, model, prioritet FROM dogadjaj WHERE status = 'novi';") or die("Error in query: ".mysql_error());
 
 		while ($row = mysql_fetch_assoc($q2))
 		{
@@ -34,7 +34,7 @@
 			echo "<td>" . $row['naslov'] . "</td>";
 			echo "<td>" . $row['kategorija'] . "</td>";
 			echo "<td>" . $row['podkategorija'] . "</td>";
-			echo "<td>" . $row['konfiguracijskaStavka'] . "</td>";
+			echo "<td>" . $row['model'] . "</td>";
 			echo "<td>" . $row['prioritet'] . "</td>";
 			echo "</tr>";
 		}
