@@ -1,4 +1,38 @@
-<?php
+<html>
+
+<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="all" />
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.min.css" media="all" />
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.min.css" media="all" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Pregled incidenata</title>
+</head>
+
+<body style="margin-top:10%; margin-left:20%;margin-right:20%">
+	<center>
+
+		<ul class="nav nav-tabs">
+		  <li><a href="eventManagerFiltriranje.php">Filtriranje</a></li>
+		  <li class="active"><a href="eventManagerIncidentiNovi.php">Incidenti</a></li>
+		  <li><a href="eventManagerZahtjevi.php">Zahtjevi</a></li>
+		</ul>
+		
+				
+		<table class="table">
+			
+			
+			<th>ID</th>
+			<th>Datum i vrijeme</th>
+			<th>Korisnik</th>
+			<th>Naslov</th>
+			<th>Kategorija</th>
+			<th>Podkategorija</th>
+			<th>Model</th>
+			<th>Prioritet</th>
+			<th>Status</th>			
+			<th></th>
+			<?php
 
 	try
 	{
@@ -20,7 +54,7 @@
 			echo "<td>" . $row['model'] . "</td>";
 			echo "<td>" . $row['prioritet'] . "</td>";
 			echo "<td>" . $row['status'] . "</td>";	
-			echo "<td><input type="submit" class="btn btn-success" value="Uredi"/>";
+			
 			echo "</tr>";
 		}
 		
@@ -33,3 +67,8 @@
 	}
 
 ?>
+		</table>
+	</center>
+</body>
+
+</html>

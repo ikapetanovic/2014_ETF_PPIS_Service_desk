@@ -1,4 +1,39 @@
-<?php
+<html>
+
+<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="all" />
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.min.css" media="all" />
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.min.css" media="all" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Pregled događaja</title>
+</head>
+
+<body style="margin-top:10%; margin-left:20%;margin-right:20%">
+	<center>
+
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="userDogadjajNovi.html">Događaji</a></li>
+		</ul>
+		
+		<ul class="nav nav-pills">
+		  <li><a href="userDogadjajNovi.html">Novi događaj</a></li>
+		  <li class="active"><a href="userDogadjajPregled.php">Pregled događaja</a></li>
+		</ul>
+		
+		<table class="table">
+			
+			
+			<th>ID</th>
+			<th>Datum i vrijeme</th>
+			<th>Naslov</th>
+			<th>Komentar</th>
+			<th>Prioritet</th>
+			<th>Status</th>		
+			
+
+			<?php session_start();
+			$IDKorisnik = $_SESSION['id'];
 
 	try
 	{
@@ -61,3 +96,10 @@
 	}
 
 ?>
+
+</form>
+		</table>
+	</center>
+</body>
+
+</html>
